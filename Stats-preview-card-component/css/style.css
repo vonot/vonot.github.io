@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+:root{
+    --background: hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --accent: hsla(277, 64%, 61%, 1);
+    --accent-dk: hsla(277, 64%, 61%, 0.4);
+
+    --bold-text: hsl(0, 0%, 100%);
+    --paragraph: hsla(0, 0%, 100%, 0.75);
+    --stats-title: hsla(0, 0%, 100%, 0.6);
+}
+
+body{
+    background-color: var(--background);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 4rem 2rem 4rem 2rem;
+    height: 100%;
+    background-color: var(--card-background);
+    color: var(--bold-text);
+    text-align: center;
+    align-self: center;
+}
+
+.header{
+    width: 100%;
+    text-align: center;
+}
+
+.img{
+    background-image: url('../images/image-header-mobile.jpg');
+    width: 100%;
+    height: 240px;
+    background-size:cover;
+    background-color: var(--accent-dk);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-blend-mode:overlay;
+}
+
+.title{
+    font-family: Lexend Deca, sans-serif;
+    padding: 20px;
+    font-size: 1.8em;
+}
+
+.title span{
+    color: var(--accent);
+}
+
+.description{
+    color: var(--paragraph);
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.description{
+    margin: 20px 20px;
+}
+
+.stats{
+    margin-bottom: 20px;
+}
+
+.stats span{
+    color: var(--stats-title);
+    font-weight: 400;
+    font-family: Inter, sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.stat{
+    font-size: 1.4rem;
+    padding: 20px 0 5px 0;
+    color: var(--bold-text);
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+}
+
+@media (min-width:720px){
+    .container{
+        flex-direction: row-reverse;
+        max-width: 1080px;
+    }
+
+    .img{
+        height: 100%;
+        background-image: url('../images/image-header-desktop.jpg');
+    }
+
+    .body{
+        padding: 20px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .title{
+        font-size: 2.3rem;
+    }
+
+    .stats{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
